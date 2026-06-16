@@ -21,6 +21,18 @@
         .markdown-body code { @apply bg-slate-100 px-1 rounded font-mono text-sm; }
         .markdown-body pre { @apply bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto mb-4; }
         .markdown-body blockquote { @apply border-l-4 border-blue-500 pl-4 italic my-4 text-slate-600; }
+        
+        /* Mermaid Diagram Styling */
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .mermaid svg {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 transition-colors duration-300">
@@ -134,8 +146,44 @@
     <!-- Mermaid CDN & Init -->
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.js';
-        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+        
+        // Configure Mermaid for optimal rendering
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            securityLevel: 'loose',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true
+            },
+            stateDiagram: {
+                useMaxWidth: true
+            },
+            sequence: {
+                useMaxWidth: true
+            },
+            gantt: {
+                useMaxWidth: true
+            },
+            class: {
+                useMaxWidth: true
+            },
+            graph: {
+                useMaxWidth: true
+            }
+        });
+        
         window.mermaid = mermaid;
+        
+        // Watch for DOM changes and re-render Mermaid diagrams
+        const observer = new MutationObserver(() => {
+            mermaid.contentLoaded();
+        });
+        
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
     </script>
 
     <script>
