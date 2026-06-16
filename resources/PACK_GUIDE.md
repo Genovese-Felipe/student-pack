@@ -1,6 +1,15 @@
 # 📚 Curated Resources for Students
 
-Maximize your GitHub Student Developer Pack with these hand-picked resources and guides.
+Maximizing your GitHub Student Developer Pack with these hand-picked resources and guides.
+
+## 📊 Learning Path
+
+```mermaid
+graph LR
+    A[Setup Foundation] --> B[Master Dev Tools]
+    B --> C[Design & Deploy]
+    C --> D[Secure & Scale]
+```
 
 ## ☁️ Cloud & Hosting
 - **DigitalOcean:** Perfect for simple Linux servers (Droplets). Use your $200 credit wisely!
@@ -16,11 +25,6 @@ Maximize your GitHub Student Developer Pack with these hand-picked resources and
 - **Canva Pro:** Essential for creating presentations, social media posts, and even your resume.
 - **Icons8:** Thousands of icons and illustrations to make your apps look professional.
 - **1Password:** Keep your development secrets and personal passwords safe for free for a year.
-
-## 🎓 Learning Platforms
-- **FrontendMasters:** High-quality deep dives into JavaScript and CSS.
-- **DataCamp:** The best place to start your Data Science journey.
-- **Educative:** Interactive text-based courses (much faster than video!).
 
 ---
 ### 💡 Pro Tip
