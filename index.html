@@ -163,7 +163,7 @@
 
     <!-- Mermaid CDN & Init -->
     <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.js';
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
         mermaid.initialize({
             startOnLoad: false,
             theme: 'base',
@@ -317,7 +317,9 @@
         // marked.js renders ```mermaid fences as escaped <pre><code class="language-mermaid">,
         // so guide diagrams never actually drew until we convert them ourselves.
         async function renderMermaidIn(container) {
-            if (!window.mermaid) return;
+            if (!window.mermaid) {
+                await new Promise(resolve => window.addEventListener('mermaid-ready', resolve, { once: true }));
+            }
             const codeBlocks = container.querySelectorAll('code.language-mermaid');
             codeBlocks.forEach(code => {
                 const div = document.createElement('div');
@@ -330,7 +332,9 @@
         }
 
         async function renderHomeDiagrams(lang) {
-            if (!window.mermaid) return;
+            if (!window.mermaid) {
+                await new Promise(resolve => window.addEventListener('mermaid-ready', resolve, { once: true }));
+            }
             const flowEl = document.getElementById('home-flow-diagram');
             const mapEl = document.getElementById('home-mindmap-diagram');
             flowEl.removeAttribute('data-processed');
