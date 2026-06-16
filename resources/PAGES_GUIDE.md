@@ -108,8 +108,6 @@ graph TB
     style Branch fill:#f39c12,color:#fff
     style ActionsBenefits fill:#2ed573,color:#000
     style BranchBenefits fill:#2ed573,color:#000
-    style ActionsBenefits fill:#2ed573,color:#000
-    style BranchBenefits fill:#2ed573,color:#000
 ```
 
 ## 🌐 URL Formats
