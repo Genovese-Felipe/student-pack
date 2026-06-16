@@ -201,7 +201,7 @@ timeline
 - [ ] Check 'Enforce HTTPS' checkbox (when available)
 - [ ] Test your domain in browser
 - [ ] Verify certificate is valid
-- [ ] Check both www.domain.com and domain.com
+- [ ] Check both `www.domain.com` and `domain.com`
 
 ---
 
@@ -243,6 +243,6 @@ graph LR
 ## 🔗 Reference Resources
 
 - [GitHub Pages Documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
-- [Name.com DNS Management](https://www.name.com/support/articles/115004149548)
+- [Name.com Support](https://www.name.com)
 - [GitHub Pages IP Addresses](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
 - [DNS Propagation Checker](https://www.whatsmydns.net/)
