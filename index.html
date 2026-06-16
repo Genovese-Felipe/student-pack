@@ -197,7 +197,6 @@
             container.innerHTML = `<div class="flex justify-center py-20"><i class="fas fa-circle-notch animate-spin text-4xl text-blue-600"></i></div>`;
 
             try {
-                // Determine file name based on language
                 const prefix = currentLang === 'pt' ? (name === 'PAGES_GUIDE' ? 'GUIA_PAGES' :
                                                       name === 'DOMAIN_SETUP' ? 'CONFIGURACAO_DOMINIO' :
                                                       name === 'PACK_GUIDE' ? 'GUIA_PACK' :
@@ -208,17 +207,25 @@
                 if (!response.ok) throw new Error('Failed to load');
                 const text = await response.text();
 
-                // Parse Markdown
-                container.innerHTML = marked.parse(text);
+                // Custom renderer to handle mermaid blocks
+                const renderer = new marked.Renderer();
+                renderer.code = (code, language) => {
+                    if (language === 'mermaid') {
+                        return `<div class="mermaid">${code}</div>`;
+                    }
+                    return `<pre><code class="language-${language}">${code}</code></pre>`;
+                };
 
-                // Re-init Mermaid for any diagrams in the text
-                // Note: This requires the content to be parsed such that mermaid blocks are identifiable.
-                // For simplicity, we search for mermaid blocks in the markdown and render them.
+                container.innerHTML = marked.parse(text, { renderer });
+
                 setTimeout(() => {
                     if (window.mermaid) {
-                        window.mermaid.run();
+                        // Ensure mermaid processes the new elements
+                        window.mermaid.run({
+                            nodes: document.querySelectorAll('.mermaid')
+                        });
                     }
-                }, 100);
+                }, 200);
 
             } catch (err) {
                 container.innerHTML = `<div class="text-center py-20 text-red-500"><i class="fas fa-exclamation-triangle mb-4 text-4xl"></i><br>Error loading guide. Please try again.</div>`;
