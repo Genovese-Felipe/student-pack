@@ -42,6 +42,7 @@ Get a **free domain name** and **SSL certificate**! Perfect for hosting your por
 *   **Bonus:** Free SSL protection.
 *   **How to get it:** Connect your GitHub account at [Name.com/hub/github-students](https://www.name.com/hub/github-students).
 *   **Setup Guide:** See how to connect your domain to GitHub Pages [here](./resources/DOMAIN_SETUP.md).
+*   **Hosting Guide:** Learn how to host your project for free [here](./resources/PAGES_GUIDE.md).
 
 ### 🛠️ Top 5 Pack Benefits
 1.  **GitHub Copilot:** Your AI pair programmer (Autocomplete for your code).
@@ -90,6 +91,7 @@ Garanta um **domínio gratuito** e um **certificado SSL**! Perfeito para hospeda
 *   **Bônus:** Proteção SSL gratuita.
 *   **Como conseguir:** Conecte sua conta do GitHub em [Name.com/hub/github-students](https://www.name.com/hub/github-students).
 *   **Guia de Configuração:** Veja como conectar seu domínio ao GitHub Pages [aqui](./resources/CONFIGURACAO_DOMINIO.md).
+*   **Guia de Hospedagem:** Aprenda a hospedar seu projeto gratuitamente [aqui](./resources/GUIA_PAGES.md).
 
 ### 🛠️ Top 5 Benefícios do Pack
 1.  **GitHub Copilot:** Seu par de programação IA (Autocompleta seu código).
