@@ -198,24 +198,25 @@ graph TB
 ## 🚀 Cronograma: Do Pack à Produção
 
 ```mermaid
-timeline
+gantt
     title Jornada do GitHub Student Developer Pack
+    dateFormat YYYY-MM-DD
     
     section Semana 1: Setup
-        Dia 1-2: Verifique status de estudante
-        Dia 3-5: Reivindique benefícios do pack
-        Dia 5-7: Configure ambiente de desenvolvimento
+    Verifique status de estudante          :a1, 2026-01-01, 2d
+    Reivindique benefícios do pack         :a2, after a1, 3d
+    Configure ambiente de desenvolvimento  :a3, after a2, 3d
     
     section Semana 2-3: Aprendizado
-        Explore ferramentas e plataformas
-        Conclua primeiros tutoriais
-        Construa projetos práticos
+    Explore ferramentas e plataformas      :b1, after a3, 5d
+    Conclua primeiros tutoriais            :b2, after b1, 4d
+    Construa projetos práticos             :b3, after b2, 5d
     
     section Semana 4+: Construção
-        Comece projeto real
-        Implante em GitHub Pages
-        Conecte domínio personalizado
-        Compartilhe com o mundo
+    Comece projeto real                    :c1, after b3, 7d
+    Implante em GitHub Pages               :c2, after c1, 3d
+    Conecte domínio personalizado          :c3, after c2, 2d
+    Compartilhe com o mundo                :c4, after c3, 1d
 ```
 
 ## 💡 Dicas de Ouro para Máximo Valor

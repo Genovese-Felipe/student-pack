@@ -198,24 +198,25 @@ graph TB
 ## 🚀 Timeline: From Pack to Production
 
 ```mermaid
-timeline
+gantt
     title Student Developer Pack Journey
+    dateFormat YYYY-MM-DD
     
     section Week 1: Setup
-        Day 1-2: Verify student status
-        Day 3-5: Claim pack benefits
-        Day 5-7: Set up development environment
+    Verify student status          :a1, 2026-01-01, 2d
+    Claim pack benefits            :a2, after a1, 3d
+    Set up development environment :a3, after a2, 3d
     
     section Week 2-3: Learning
-        Explore tools and platforms
-        Complete first tutorials
-        Build practice projects
+    Explore tools and platforms    :b1, after a3, 5d
+    Complete first tutorials       :b2, after b1, 4d
+    Build practice projects        :b3, after b2, 5d
     
     section Week 4+: Building
-        Start real project
-        Deploy to GitHub Pages
-        Connect custom domain
-        Share with world
+    Start real project             :c1, after b3, 7d
+    Deploy to GitHub Pages         :c2, after c1, 3d
+    Connect custom domain          :c3, after c2, 2d
+    Share with world               :c4, after c3, 1d
 ```
 
 ## 💡 Pro Tips for Maximum Value

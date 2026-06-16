@@ -54,12 +54,12 @@
             <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
                 Hub.Dev
             </h1>
-            <div class="hidden md:flex gap-8 items-center font-semibold text-sm">
-                <a href="#" onclick="showSection('home')" data-i18n="nav-home">Home</a>
-                <a href="#" onclick="loadGuide('PAGES_GUIDE')" data-i18n="nav-hosting">Hosting</a>
-                <a href="#" onclick="loadGuide('DOMAIN_SETUP')" data-i18n="nav-domains">Domains</a>
-                <a href="#" onclick="loadGuide('TROUBLESHOOTING')" data-i18n="nav-trouble">Troubleshooting</a>
-                <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition" data-i18n="nav-contact">Connect</a>
+            <div class="hidden md:flex gap-8 items-center font-bold text-base text-slate-700">
+                <a href="#" onclick="showSection('home')" class="hover:text-blue-600 transition-colors" data-i18n="nav-home">Home</a>
+                <a href="#" onclick="loadGuide('PAGES_GUIDE')" class="hover:text-blue-600 transition-colors" data-i18n="nav-hosting">Hosting</a>
+                <a href="#" onclick="loadGuide('DOMAIN_SETUP')" class="hover:text-blue-600 transition-colors" data-i18n="nav-domains">Domains</a>
+                <a href="#" onclick="loadGuide('TROUBLESHOOTING')" class="hover:text-blue-600 transition-colors" data-i18n="nav-trouble">Troubleshooting</a>
+                <a href="#contact" class="px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:text-white transition shadow-sm" data-i18n="nav-contact">Connect</a>
             </div>
         </div>
     </nav>
@@ -168,15 +168,23 @@
             startOnLoad: false,
             theme: 'base',
             themeVariables: {
-                primaryColor: '#dbeafe',
-                primaryBorderColor: '#2563eb',
-                primaryTextColor: '#0f172a',
-                lineColor: '#2563eb',
-                secondaryColor: '#eef2ff',
+                primaryColor: '#e0e7ff',
+                primaryBorderColor: '#4f46e5',
+                primaryTextColor: '#1e293b',
+                lineColor: '#4f46e5',
+                secondaryColor: '#f1f5f9',
+                secondaryBorderColor: '#cbd5e1',
+                secondaryTextColor: '#334155',
                 tertiaryColor: '#ffffff',
+                tertiaryBorderColor: '#e2e8f0',
+                nodeBorder: '#4f46e5',
+                mainBkg: '#f8fafc',
+                clusterBkg: '#ffffff',
+                clusterBorder: '#cbd5e1',
+                edgeLabelBackground: '#ffffff',
                 fontFamily: 'Inter, sans-serif'
             },
-            flowchart: { useMaxWidth: true, htmlLabels: true },
+            flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' },
             sequence: { useMaxWidth: true },
             stateDiagram: { useMaxWidth: true }
         });

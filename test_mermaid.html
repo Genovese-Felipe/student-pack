@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div id="content"></div>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs';
+        window.mermaid = mermaid;
+        mermaid.initialize({ startOnLoad: false, theme: 'default' });
+
+        async function run() {
+            try {
+                const resp = await fetch('./resources/PACK_GUIDE.md');
+                const text = await resp.text();
+                console.log("fetched text", text.length);
+            } catch(e) {
+                console.error("fetch failed", e);
+            }
+        }
+        run();
+    </script>
+</body>
+</html>
