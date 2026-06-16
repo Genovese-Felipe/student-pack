@@ -57,7 +57,7 @@ sequenceDiagram
 > **SSL/TLS:** Pode levar alguns minutos para a opção "Enforce HTTPS" ficar disponível após configurar o DNS. Tenha paciência!
 
 > [!NOTE]
-> **Propagação:** Use ferramentas como [whatsmydns.net](https://www.whatsmydns.net/) para acompanhar as mudanças de DNS pelo mundo.
+> **Propagação:** Use ferramentas como o [Google DNS Lookup](https://developers.google.com/speed/public-dns/docs/troubleshooting) para acompanhar as mudanças de DNS.
 
 ---
 *Referência: [Documentação do GitHub Pages](https://docs.github.com/pt/pages/configuring-a-custom-domain-for-your-github-pages-site)*

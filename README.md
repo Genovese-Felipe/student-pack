@@ -55,7 +55,7 @@ Get a **free domain name** and **SSL certificate**! Perfect for hosting your por
 
 *   **Offer:** 1 free standard domain (extensions like .live, .studio, .software, .dev, etc.)
 *   **Bonus:** Free SSL protection.
-*   **How to get it:** Connect your GitHub account at [Name.com/hub/github-students](https://www.name.com/hub/github-students).
+*   **How to get it:** Connect your GitHub account at [Name.com/partner/github-students](https://www.name.com/partner/github-students).
 *   **Setup Guide:** See how to connect your domain to GitHub Pages [here](./resources/DOMAIN_SETUP.md).
 *   **Hosting Guide:** Learn how to host your project for free [here](./resources/PAGES_GUIDE.md).
 *   **Troubleshooting:** Fixed errors? Check the [Decision Tree here](./resources/TROUBLESHOOTING.md).
@@ -135,7 +135,7 @@ Garanta um **domínio gratuito** e um **certificado SSL**! Perfeito para hospeda
 
 *   **Oferta:** 1 domínio padrão gratuito (extensões como .live, .studio, .software, .dev, etc.)
 *   **Bônus:** Proteção SSL gratuita.
-*   **Como conseguir:** Conecte sua conta do GitHub em [Name.com/hub/github-students](https://www.name.com/hub/github-students).
+*   **Como conseguir:** Conecte sua conta do GitHub em [Name.com/partner/github-students](https://www.name.com/partner/github-students).
 *   **Guia de Configuração:** Veja como conectar seu domínio ao GitHub Pages [aqui](./resources/CONFIGURACAO_DOMINIO.md).
 *   **Guia de Hospedagem:** Aprenda a hospedar seu projeto gratuitamente [aqui](./resources/GUIA_PAGES.md).
 *   **Solução de Problemas:** Erros? Veja a [Árvore de Decisão aqui](./resources/GUIA_SUPORTE.md).
@@ -181,7 +181,7 @@ graph TD
 ### 📺 Video Guide / Guia em Vídeo
 Check out how to get started / Veja como começar:
 
-[![GitHub or Go Home](http://img.youtube.com/vi/i21-AjPpiFc/0.jpg)](https://www.youtube.com/watch?v=i21-AjPpiFc)
+[![GitHub or Go Home](https://img.youtube.com/vi/i21-AjPpiFc/hqdefault.jpg)](https://www.youtube.com/watch?v=i21-AjPpiFc)
 
 ---
 *Created with ❤️ for students worldwide.*
