@@ -15,6 +15,26 @@
 ### Welcome, Student Developer! 🎓
 The **GitHub Student Developer Pack** is the greatest collection of free tools for students. This repository is designed to help you navigate these benefits and get started with your professional journey today.
 
+```mermaid
+mindmap
+  root((Student Developer Pack))
+    Domains
+      Name.com
+      Namecheap
+      .TECH
+    Cloud
+      DigitalOcean
+      Azure
+      Heroku
+    Tools
+      Copilot
+      JetBrains
+      Termius
+    Design
+      Canva
+      Icons8
+```
+
 ### 🌟 Featured Offer: Name.com
 Get a **free domain name** and **SSL certificate**! Perfect for hosting your portfolio or your next big project.
 
@@ -42,6 +62,26 @@ Get a **free domain name** and **SSL certificate**! Perfect for hosting your por
 
 ### Bem-vindo, Estudante Desenvolvedor! 🎓
 O **GitHub Student Developer Pack** é a melhor coleção de ferramentas gratuitas para estudantes. Este repositório foi criado para ajudar você a aproveitar esses benefícios e começar sua jornada profissional hoje mesmo.
+
+```mermaid
+mindmap
+  root((Student Developer Pack))
+    Domínios
+      Name.com
+      Namecheap
+      .TECH
+    Nuvem
+      DigitalOcean
+      Azure
+      Heroku
+    Ferramentas
+      Copilot
+      JetBrains
+      Termius
+    Design
+      Canva
+      Icons8
+```
 
 ### 🌟 Oferta em Destaque: Name.com
 Garanta um **domínio gratuito** e um **certificado SSL**! Perfeito para hospedar seu portfólio ou seu próximo grande projeto.
