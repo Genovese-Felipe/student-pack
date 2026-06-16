@@ -173,15 +173,13 @@ flowchart TD
 
 ## 🔍 Quick Diagnostics Checklist
 
-```mermaid
-checklist
-    title Quick Diagnostics
-    - Is repo public?
-    - Have you waited 5-10 minutes after pushing?
-    - Are all DNS records configured?
-    - Is 'Enforce HTTPS' disabled (until cert ready)?
-    - Does your CNAME match your domain?
-    - Are Actions enabled in your repo?
-    - Check GitHub Status at status.github.com
-```
+**Quick Diagnostics**
+
+- [ ] Is repo public?
+- [ ] Have you waited 5-10 minutes after pushing?
+- [ ] Are all DNS records configured?
+- [ ] Is 'Enforce HTTPS' disabled (until cert ready)?
+- [ ] Does your CNAME match your domain?
+- [ ] Are Actions enabled in your repo?
+- [ ] Check GitHub Status at status.github.com
 

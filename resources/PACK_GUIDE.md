@@ -184,18 +184,16 @@ graph TB
 
 ## ✅ Getting Started Checklist
 
-```mermaid
-checklist
-    title Start Using Your Pack Today
-    - Verify your student status with GitHub
-    - Visit education.github.com/pack
-    - Claim your free domain from Name.com
-    - Set up GitHub Copilot
-    - Install your preferred JetBrains IDE
-    - Create your first GitHub Pages site
-    - Explore DigitalOcean or Azure
-    - Build something amazing!
-```
+**Start Using Your Pack Today**
+
+- [ ] Verify your student status with GitHub
+- [ ] Visit education.github.com/pack
+- [ ] Claim your free domain from Name.com
+- [ ] Set up GitHub Copilot
+- [ ] Install your preferred JetBrains IDE
+- [ ] Create your first GitHub Pages site
+- [ ] Explore DigitalOcean or Azure
+- [ ] Build something amazing!
 
 ## 🚀 Timeline: From Pack to Production
 

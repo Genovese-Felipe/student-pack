@@ -173,14 +173,12 @@ flowchart TD
 
 ## 🔍 Lista de Verificação de Diagnóstico Rápido
 
-```mermaid
-checklist
-    title Diagnóstico Rápido
-    - O repo é público?
-    - Você esperou 5-10 minutos após fazer push?
-    - Todos os registros DNS estão configurados?
-    - 'Enforce HTTPS' está desabilitado (até certificado pronto)?
-    - Seu CNAME corresponde ao seu domínio?
-    - As Actions estão habilitadas no seu repo?
-    - Verificar Status do GitHub em status.github.com
-```
+**Diagnóstico Rápido**
+
+- [ ] O repo é público?
+- [ ] Você esperou 5-10 minutos após fazer push?
+- [ ] Todos os registros DNS estão configurados?
+- [ ] 'Enforce HTTPS' está desabilitado (até certificado pronto)?
+- [ ] Seu CNAME corresponde ao seu domínio?
+- [ ] As Actions estão habilitadas no seu repo?
+- [ ] Verificar Status do GitHub em status.github.com

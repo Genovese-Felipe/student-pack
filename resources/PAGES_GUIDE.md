@@ -77,15 +77,13 @@ graph LR
 
 ### Step-by-Step Setup:
 
-```mermaid
-checklist
-    title Enable GitHub Pages in 5 Steps
-    - Navigate to your repository Settings
-    - Click on 'Pages' in the left sidebar
-    - Select 'GitHub Actions' (recommended) or 'Deploy from a branch'
-    - If 'Deploy from a branch': Choose your main branch
-    - Click Save and wait 1-2 minutes
-```
+**Enable GitHub Pages in 5 Steps**
+
+- [ ] Navigate to your repository Settings
+- [ ] Click on 'Pages' in the left sidebar
+- [ ] Select 'GitHub Actions' (recommended) or 'Deploy from a branch'
+- [ ] If 'Deploy from a branch': Choose your main branch
+- [ ] Click Save and wait 1-2 minutes
 
 ## 🚀 Deployment Options Comparison
 
@@ -136,12 +134,6 @@ graph TD
 
 Whenever someone clicks on your repository name, they can access a conventional GitHub Pages site. This allows you to present everything you are creating in a user-friendly manner, making it accessible for anyone to review and familiarize themselves with your work.
 
-### How to Enable:
-1. Navigate to your repository **Settings**.
-2. Click on **Pages** in the left sidebar.
-3. Under **Build and deployment**, select **GitHub Actions** (recommended) or **Deploy from a branch**.
-4. Your site will be live at `https://yourusername.github.io/repository-name/`.
-
 ## 🎨 Custom Domain Option
 
 ```mermaid
@@ -185,18 +177,16 @@ sequenceDiagram
 
 ## ✅ Verification Checklist
 
-```mermaid
-checklist
-    title Verify GitHub Pages Setup
-    - Repository is public
-    - GitHub Pages is enabled in Settings
-    - Source branch is correct
-    - Build was successful
-    - Site URL matches expected format
-    - Can access site from browser
-    - Content is displaying correctly
-    - Links are working properly
-```
+**Verify GitHub Pages Setup**
+
+- [ ] Repository is public
+- [ ] GitHub Pages is enabled in Settings
+- [ ] Source branch is correct
+- [ ] Build was successful
+- [ ] Site URL matches expected format
+- [ ] Can access site from browser
+- [ ] Content is displaying correctly
+- [ ] Links are working properly
 
 ## 🚀 Next Steps
 
