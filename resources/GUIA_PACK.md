@@ -184,18 +184,16 @@ graph TB
 
 ## ✅ Lista de Verificação para Começar
 
-```mermaid
-checklist
-    title Comece a Usar Seu Pack Hoje
-    - Verifique seu status de estudante no GitHub
-    - Visite education.github.com/pack
-    - Reivindique seu domínio grátis do Name.com
-    - Configure o GitHub Copilot
-    - Instale seu IDE JetBrains preferido
-    - Crie seu primeiro site do GitHub Pages
-    - Explore DigitalOcean ou Azure
-    - Construa algo incrível!
-```
+**Comece a Usar Seu Pack Hoje**
+
+- [ ] Verifique seu status de estudante no GitHub
+- [ ] Visite education.github.com/pack
+- [ ] Reivindique seu domínio grátis do Name.com
+- [ ] Configure o GitHub Copilot
+- [ ] Instale seu IDE JetBrains preferido
+- [ ] Crie seu primeiro site do GitHub Pages
+- [ ] Explore DigitalOcean ou Azure
+- [ ] Construa algo incrível!
 
 ## 🚀 Cronograma: Do Pack à Produção
 

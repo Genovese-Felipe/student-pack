@@ -92,6 +92,24 @@
                     </div>
                 </div>
             </header>
+
+            <!-- Architecture / Flow Section -->
+            <section class="py-16 px-6 max-w-6xl mx-auto">
+                <h3 class="text-2xl font-bold text-center mb-2" data-i18n="flow-title">How the Ecosystem Connects</h3>
+                <p class="text-center text-slate-500 mb-10 max-w-2xl mx-auto" data-i18n="flow-desc">From claiming the Pack to a live site on your own domain — every piece, visualized.</p>
+                <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-6 md:p-10 overflow-x-auto">
+                    <div class="mermaid" id="home-flow-diagram"></div>
+                </div>
+            </section>
+
+            <!-- Benefits Mindmap Section -->
+            <section class="py-4 px-6 max-w-6xl mx-auto pb-20">
+                <h3 class="text-2xl font-bold text-center mb-2" data-i18n="mindmap-title">Pack Benefits at a Glance</h3>
+                <p class="text-center text-slate-500 mb-10 max-w-2xl mx-auto" data-i18n="mindmap-desc">Every category in the Student Developer Pack, mapped.</p>
+                <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-6 md:p-10 overflow-x-auto">
+                    <div class="mermaid" id="home-mindmap-diagram"></div>
+                </div>
+            </section>
         </div>
 
         <!-- Dynamic Guide Section -->
@@ -146,44 +164,24 @@
     <!-- Mermaid CDN & Init -->
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.js';
-        
-        // Configure Mermaid for optimal rendering
-        mermaid.initialize({ 
-            startOnLoad: true,
-            theme: 'default',
-            securityLevel: 'loose',
-            flowchart: {
-                useMaxWidth: true,
-                htmlLabels: true
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#dbeafe',
+                primaryBorderColor: '#2563eb',
+                primaryTextColor: '#0f172a',
+                lineColor: '#2563eb',
+                secondaryColor: '#eef2ff',
+                tertiaryColor: '#ffffff',
+                fontFamily: 'Inter, sans-serif'
             },
-            stateDiagram: {
-                useMaxWidth: true
-            },
-            sequence: {
-                useMaxWidth: true
-            },
-            gantt: {
-                useMaxWidth: true
-            },
-            class: {
-                useMaxWidth: true
-            },
-            graph: {
-                useMaxWidth: true
-            }
+            flowchart: { useMaxWidth: true, htmlLabels: true },
+            sequence: { useMaxWidth: true },
+            stateDiagram: { useMaxWidth: true }
         });
-        
         window.mermaid = mermaid;
-        
-        // Watch for DOM changes and re-render Mermaid diagrams
-        const observer = new MutationObserver(() => {
-            mermaid.contentLoaded();
-        });
-        
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
+        window.dispatchEvent(new Event('mermaid-ready'));
     </script>
 
     <script>
@@ -199,7 +197,11 @@
                 "hero-desc": "Explore the GitHub Student Developer Pack with professional guides and a ready-to-deploy template.",
                 "hero-cta": "Explore the Pack",
                 "btn-back": "Back to Home",
-                "loading": "Loading guide..."
+                "loading": "Loading guide...",
+                "flow-title": "How the Ecosystem Connects",
+                "flow-desc": "From claiming the Pack to a live site on your own domain — every piece, visualized.",
+                "mindmap-title": "Pack Benefits at a Glance",
+                "mindmap-desc": "Every category in the Student Developer Pack, mapped."
             },
             pt: {
                 "nav-home": "Início",
@@ -212,7 +214,84 @@
                 "hero-desc": "Explore o GitHub Student Developer Pack com guias profissionais e um template pronto para uso.",
                 "hero-cta": "Explorar o Pack",
                 "btn-back": "Voltar para Início",
-                "loading": "Carregando guia..."
+                "loading": "Carregando guia...",
+                "flow-title": "Como o Ecossistema se Conecta",
+                "flow-desc": "Desde garantir o Pack até um site no ar com seu próprio domínio — cada peça, visualizada.",
+                "mindmap-title": "Benefícios do Pack em um Mapa",
+                "mindmap-desc": "Cada categoria do Student Developer Pack, mapeada."
+            }
+        };
+
+        const diagrams = {
+            en: {
+                flow: `graph TD
+    A[Student] -->|Verifies status| B[GitHub Student Developer Pack]
+    B --> C[Name.com: Free Domain + SSL]
+    B --> D[GitHub Pages: Free Hosting]
+    B --> E[Dev Tools: Copilot, JetBrains, Termius]
+    C --> F[Configure DNS]
+    D --> F
+    F --> G((Live Site on Your Domain))
+    E --> H[Build Faster, Ship Sooner]
+    H --> G`,
+                mindmap: `mindmap
+  root((Student Developer Pack))
+    Domains
+      Name.com
+      Namecheap
+      .TECH
+    Cloud
+      DigitalOcean
+      Azure
+      Heroku
+    Dev Tools
+      Copilot
+      JetBrains
+      Termius
+    Design
+      Canva
+      Icons8
+    Security
+      1Password
+      Sentry
+    AI Assistants
+      Copilot
+      Camber`
+            },
+            pt: {
+                flow: `graph TD
+    A[Estudante] -->|Verifica status| B[GitHub Student Developer Pack]
+    B --> C[Name.com: Domínio Grátis + SSL]
+    B --> D[GitHub Pages: Hospedagem Grátis]
+    B --> E[Ferramentas Dev: Copilot, JetBrains, Termius]
+    C --> F[Configura DNS]
+    D --> F
+    F --> G((Site no Ar no Seu Domínio))
+    E --> H[Construa Mais Rápido]
+    H --> G`,
+                mindmap: `mindmap
+  root((Student Developer Pack))
+    Domínios
+      Name.com
+      Namecheap
+      .TECH
+    Nuvem
+      DigitalOcean
+      Azure
+      Heroku
+    Ferramentas
+      Copilot
+      JetBrains
+      Termius
+    Design
+      Canva
+      Icons8
+    Segurança
+      1Password
+      Sentry
+    Assistentes IA
+      Copilot
+      Camber`
             }
         };
 
@@ -228,8 +307,37 @@
                 el.innerText = translations[lang][key];
             });
 
+            renderHomeDiagrams(lang);
+
             // Refresh content if in a guide
             if (window.currentGuide) loadGuide(window.currentGuide);
+        }
+
+        // Mermaid only understands <div class="mermaid">{definition}</div>.
+        // marked.js renders ```mermaid fences as escaped <pre><code class="language-mermaid">,
+        // so guide diagrams never actually drew until we convert them ourselves.
+        async function renderMermaidIn(container) {
+            if (!window.mermaid) return;
+            const codeBlocks = container.querySelectorAll('code.language-mermaid');
+            codeBlocks.forEach(code => {
+                const div = document.createElement('div');
+                div.className = 'mermaid';
+                div.textContent = code.textContent;
+                code.closest('pre').replaceWith(div);
+            });
+            const nodes = container.querySelectorAll('div.mermaid');
+            if (nodes.length) await window.mermaid.run({ nodes: Array.from(nodes) });
+        }
+
+        async function renderHomeDiagrams(lang) {
+            if (!window.mermaid) return;
+            const flowEl = document.getElementById('home-flow-diagram');
+            const mapEl = document.getElementById('home-mindmap-diagram');
+            flowEl.removeAttribute('data-processed');
+            mapEl.removeAttribute('data-processed');
+            flowEl.textContent = diagrams[lang].flow;
+            mapEl.textContent = diagrams[lang].mindmap;
+            await window.mermaid.run({ nodes: [flowEl, mapEl] });
         }
 
         function showSection(id) {
@@ -259,21 +367,20 @@
                 // Parse Markdown
                 container.innerHTML = marked.parse(text);
 
-                // Re-init Mermaid for any diagrams in the text
-                // Note: This requires the content to be parsed such that mermaid blocks are identifiable.
-                // For simplicity, we search for mermaid blocks in the markdown and render them.
-                setTimeout(() => {
-                    if (window.mermaid) {
-                        window.mermaid.run();
-                    }
-                }, 100);
+                // Convert ```mermaid fences (rendered by marked as plain <pre><code>)
+                // into real diagrams.
+                await renderMermaidIn(container);
 
             } catch (err) {
                 container.innerHTML = `<div class="text-center py-20 text-red-500"><i class="fas fa-exclamation-triangle mb-4 text-4xl"></i><br>Error loading guide. Please try again.</div>`;
             }
         }
 
-        setLanguage(currentLang);
+        if (window.mermaid) {
+            setLanguage(currentLang);
+        } else {
+            window.addEventListener('mermaid-ready', () => setLanguage(currentLang), { once: true });
+        }
     </script>
 </body>
 </html>

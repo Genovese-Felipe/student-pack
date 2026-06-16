@@ -193,17 +193,15 @@ timeline
 
 ### Passos de Verificação:
 
-```mermaid
-checklist
-    title Verifique a Configuração do Seu Domínio
-    - Aguarde 5-10 minutos para propagação inicial
-    - Volte para GitHub Settings > Pages
-    - Verifique se arquivo CNAME foi criado
-    - Marque checkbox 'Enforce HTTPS' (quando disponível)
-    - Teste seu domínio no navegador
-    - Verifique se certificado é válido
-    - Teste tanto www.dominio.com quanto dominio.com
-```
+**Verifique a Configuração do Seu Domínio**
+
+- [ ] Aguarde 5-10 minutos para propagação inicial
+- [ ] Volte para GitHub Settings > Pages
+- [ ] Verifique se arquivo CNAME foi criado
+- [ ] Marque checkbox 'Enforce HTTPS' (quando disponível)
+- [ ] Teste seu domínio no navegador
+- [ ] Verifique se certificado é válido
+- [ ] Teste tanto www.dominio.com quanto dominio.com
 
 ---
 

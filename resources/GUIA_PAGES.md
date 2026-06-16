@@ -77,15 +77,13 @@ graph LR
 
 ### Configuração em 5 Passos:
 
-```mermaid
-checklist
-    title Ativar GitHub Pages em 5 Passos
-    - Navegue até Settings do repositório
-    - Clique em 'Pages' na barra lateral
-    - Selecione 'GitHub Actions' (recomendado) ou 'Deploy from a branch'
-    - Se 'Deploy from a branch': Escolha seu branch principal
-    - Clique Save e aguarde 1-2 minutos
-```
+**Ativar GitHub Pages em 5 Passos**
+
+- [ ] Navegue até Settings do repositório
+- [ ] Clique em 'Pages' na barra lateral
+- [ ] Selecione 'GitHub Actions' (recomendado) ou 'Deploy from a branch'
+- [ ] Se 'Deploy from a branch': Escolha seu branch principal
+- [ ] Clique Save e aguarde 1-2 minutos
 
 ## 🚀 Comparação de Opções de Implantação
 
@@ -136,12 +134,6 @@ graph TD
 
 Sempre que alguém clica no nome do seu repositório, pode acessar um site convencional do GitHub Pages. Isso permite que você apresente tudo o que está criando de forma amigável, tornando seu trabalho acessível para que qualquer pessoa possa revisar e se familiarizar com ele.
 
-### Como Ativar:
-1. Navegue até as **Settings** (Configurações) do seu repositório.
-2. Clique em **Pages** na barra lateral esquerda.
-3. Em **Build and deployment**, selecione **GitHub Actions** (recomendado) ou **Deploy from a branch**.
-4. Seu site estará online em `https://seuusuario.github.io/nome-do-repositorio/`.
-
 ## 🎨 Opção de Domínio Personalizado
 
 ```mermaid
@@ -185,18 +177,16 @@ sequenceDiagram
 
 ## ✅ Lista de Verificação
 
-```mermaid
-checklist
-    title Verifique Configuração do GitHub Pages
-    - Repositório é público
-    - GitHub Pages está habilitado em Settings
-    - Branch de origem está correto
-    - Build foi bem-sucedido
-    - URL do site corresponde ao esperado
-    - Consegue acessar site pelo navegador
-    - Conteúdo está exibindo corretamente
-    - Links estão funcionando
-```
+**Verifique Configuração do GitHub Pages**
+
+- [ ] Repositório é público
+- [ ] GitHub Pages está habilitado em Settings
+- [ ] Branch de origem está correto
+- [ ] Build foi bem-sucedido
+- [ ] URL do site corresponde ao esperado
+- [ ] Consegue acessar site pelo navegador
+- [ ] Conteúdo está exibindo corretamente
+- [ ] Links estão funcionando
 
 ## 🚀 Próximos Passos
 

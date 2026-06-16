@@ -193,17 +193,15 @@ timeline
 
 ### Verification Steps:
 
-```mermaid
-checklist
-    title Verify Your Domain Setup
-    - Wait 5-10 minutes for initial propagation
-    - Go back to GitHub Settings > Pages
-    - Verify CNAME file was created
-    - Check 'Enforce HTTPS' checkbox (when available)
-    - Test your domain in browser
-    - Verify certificate is valid
-    - Check both www.domain.com and domain.com
-```
+**Verify Your Domain Setup**
+
+- [ ] Wait 5-10 minutes for initial propagation
+- [ ] Go back to GitHub Settings > Pages
+- [ ] Verify CNAME file was created
+- [ ] Check 'Enforce HTTPS' checkbox (when available)
+- [ ] Test your domain in browser
+- [ ] Verify certificate is valid
+- [ ] Check both www.domain.com and domain.com
 
 ---
 
