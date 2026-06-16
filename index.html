@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Developer Hub | Felipe Genovese</title>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .markdown-body h1 { @apply text-4xl font-bold mb-6 mt-8; }
+        .markdown-body h2 { @apply text-2xl font-semibold mb-4 mt-8 border-b pb-2; }
+        .markdown-body p { @apply mb-4 leading-relaxed; }
+        .markdown-body ul { @apply list-disc ml-6 mb-4; }
+        .markdown-body code { @apply bg-slate-100 px-1 rounded font-mono text-sm; }
+        .markdown-body pre { @apply bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto mb-4; }
+        .markdown-body blockquote { @apply border-l-4 border-blue-500 pl-4 italic my-4 text-slate-600; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 transition-colors duration-300">
+
+    <!-- Language & Theme Bar -->
+    <div class="bg-slate-900 text-white py-2 text-xs font-bold uppercase tracking-widest">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex gap-4">
+                <button onclick="setLanguage('en')" class="hover:text-blue-400 transition">EN</button>
+                <button onclick="setLanguage('pt')" class="hover:text-blue-400 transition">PT</button>
+            </div>
+            <div id="status-tag" class="text-[10px] bg-blue-600 px-2 py-0.5 rounded shadow-sm animate-pulse">2026 LIVE</div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="sticky top-0 bg-white/80 backdrop-blur-md border-b border-slate-200 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+                Hub.Dev
+            </h1>
+            <div class="hidden md:flex gap-8 items-center font-semibold text-sm">
+                <a href="#" onclick="showSection('home')" data-i18n="nav-home">Home</a>
+                <a href="#" onclick="loadGuide('PAGES_GUIDE')" data-i18n="nav-hosting">Hosting</a>
+                <a href="#" onclick="loadGuide('DOMAIN_SETUP')" data-i18n="nav-domains">Domains</a>
+                <a href="#" onclick="loadGuide('TROUBLESHOOTING')" data-i18n="nav-trouble">Troubleshooting</a>
+                <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition" data-i18n="nav-contact">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Sections -->
+    <main class="min-h-screen">
+
+        <!-- Home Section -->
+        <div id="section-home" class="content-section">
+            <header class="py-20 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                        <span data-i18n="hero-title">Start your journey</span>
+                        <span class="text-blue-600" data-i18n="hero-highlight">the right way.</span>
+                    </h2>
+                    <p class="text-lg text-slate-600 mb-8 max-w-2xl" data-i18n="hero-desc">
+                        Explore the GitHub Student Developer Pack with professional guides and a ready-to-deploy template.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <button onclick="loadGuide('PACK_GUIDE')" class="px-8 py-3 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 shadow-lg transition" data-i18n="hero-cta">Explore the Pack</button>
+                        <a href="https://github.com/Genovese-Felipe" target="_blank" class="px-8 py-3 border border-slate-300 rounded-xl font-semibold hover:bg-slate-100 transition flex items-center gap-2">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-1 flex justify-center relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-100 rounded-3xl rotate-3 flex items-center justify-center text-blue-600 text-8xl shadow-xl border-4 border-white absolute opacity-20"></div>
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-white rounded-3xl -rotate-3 flex items-center justify-center text-blue-600 text-8xl shadow-2xl border-4 border-slate-50 z-10">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <!-- Dynamic Guide Section -->
+        <div id="section-guide" class="content-section hidden py-16 px-6 max-w-4xl mx-auto">
+            <div class="mb-8 flex items-center gap-4">
+                <button onclick="showSection('home')" class="text-slate-400 hover:text-blue-600 transition">
+                    <i class="fas fa-arrow-left"></i> <span data-i18n="btn-back">Back to Home</span>
+                </button>
+            </div>
+            <article id="guide-content" class="markdown-body bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
+                <!-- Content injected here -->
+                <div class="flex justify-center py-20">
+                    <i class="fas fa-circle-notch animate-spin text-4xl text-blue-600"></i>
+                </div>
+            </article>
+
+            <!-- Mermaid Support in Dynamic Content -->
+            <div id="mermaid-container" class="mt-8 hidden">
+                 <div class="mermaid" id="dynamic-mermaid"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-900 text-slate-400 py-16 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
+            <div>
+                <h3 class="text-white text-xl font-bold mb-4">Student.Dev Hub</h3>
+                <p class="max-w-sm mb-6">&copy; 2026 Felipe Genovese. All rights reserved. Part of the GitHub Student Pack Ecosystem.</p>
+                <div class="flex gap-6 text-xl">
+                    <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Genovese-Felipe" class="hover:text-white transition"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-12 text-sm">
+                <div class="flex flex-col gap-2">
+                    <span class="text-white font-bold mb-2">Guides</span>
+                    <a href="#" onclick="loadGuide('PAGES_GUIDE')" class="hover:text-white transition">GitHub Pages</a>
+                    <a href="#" onclick="loadGuide('DOMAIN_SETUP')" class="hover:text-white transition">Custom Domains</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-white font-bold mb-2">Resources</span>
+                    <a href="https://education.github.com/pack" class="hover:text-white transition">Get the Pack</a>
+                    <a href="https://name.com" class="hover:text-white transition">Name.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mermaid CDN & Init -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.js';
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+        window.mermaid = mermaid;
+    </script>
+
+    <script>
+        const translations = {
+            en: {
+                "nav-home": "Home",
+                "nav-hosting": "Hosting",
+                "nav-domains": "Domains",
+                "nav-trouble": "Troubleshoot",
+                "nav-contact": "Connect",
+                "hero-title": "Start your journey",
+                "hero-highlight": "the right way.",
+                "hero-desc": "Explore the GitHub Student Developer Pack with professional guides and a ready-to-deploy template.",
+                "hero-cta": "Explore the Pack",
+                "btn-back": "Back to Home",
+                "loading": "Loading guide..."
+            },
+            pt: {
+                "nav-home": "Início",
+                "nav-hosting": "Hospedagem",
+                "nav-domains": "Domínios",
+                "nav-trouble": "Suporte",
+                "nav-contact": "Conectar",
+                "hero-title": "Comece sua jornada",
+                "hero-highlight": "do jeito certo.",
+                "hero-desc": "Explore o GitHub Student Developer Pack com guias profissionais e um template pronto para uso.",
+                "hero-cta": "Explorar o Pack",
+                "btn-back": "Voltar para Início",
+                "loading": "Carregando guia..."
+            }
+        };
+
+        let currentLang = localStorage.getItem('preferredLanguage') || (navigator.language.startsWith('pt') ? 'pt' : 'en');
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                el.innerText = translations[lang][key];
+            });
+
+            // Refresh content if in a guide
+            if (window.currentGuide) loadGuide(window.currentGuide);
+        }
+
+        function showSection(id) {
+            document.querySelectorAll('.content-section').forEach(s => s.classList.add('hidden'));
+            document.getElementById('section-' + id).classList.remove('hidden');
+            window.scrollTo(0,0);
+        }
+
+        async function loadGuide(name) {
+            window.currentGuide = name;
+            showSection('guide');
+            const container = document.getElementById('guide-content');
+            container.innerHTML = `<div class="flex justify-center py-20"><i class="fas fa-circle-notch animate-spin text-4xl text-blue-600"></i></div>`;
+
+            try {
+                // Determine file name based on language
+                const prefix = currentLang === 'pt' ? (name === 'PAGES_GUIDE' ? 'GUIA_PAGES' :
+                                                      name === 'DOMAIN_SETUP' ? 'CONFIGURACAO_DOMINIO' :
+                                                      name === 'PACK_GUIDE' ? 'GUIA_PACK' :
+                                                      name === 'TROUBLESHOOTING' ? 'GUIA_SUPORTE' : name)
+                                                   : name;
+
+                const response = await fetch(`./resources/${prefix}.md`);
+                if (!response.ok) throw new Error('Failed to load');
+                const text = await response.text();
+
+                // Parse Markdown
+                container.innerHTML = marked.parse(text);
+
+                // Re-init Mermaid for any diagrams in the text
+                // Note: This requires the content to be parsed such that mermaid blocks are identifiable.
+                // For simplicity, we search for mermaid blocks in the markdown and render them.
+                setTimeout(() => {
+                    if (window.mermaid) {
+                        window.mermaid.run();
+                    }
+                }, 100);
+
+            } catch (err) {
+                container.innerHTML = `<div class="text-center py-20 text-red-500"><i class="fas fa-exclamation-triangle mb-4 text-4xl"></i><br>Error loading guide. Please try again.</div>`;
+            }
+        }
+
+        setLanguage(currentLang);
+    </script>
+</body>
+</html>
