@@ -181,7 +181,7 @@ graph TD
 ### 📺 Video Guide / Guia em Vídeo
 Check out how to get started / Veja como começar:
 
-[![GitHub or Go Home](https://img.youtube.com/vi/i21-AjPpiFc/hqdefault.jpg)](https://www.youtube.com/watch?v=i21-AjPpiFc)
+[![GitHub or Go Home](https://i.ytimg.com/vi/i21-AjPpiFc/hqdefault.jpg)](https://www.youtube.com/watch?v=i21-AjPpiFc)
 
 ---
 *Created with ❤️ for students worldwide.*
