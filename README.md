@@ -2,6 +2,7 @@
 
 [![GitHub Student Pack](https://img.shields.io/badge/GitHub-Student%20Pack-blueviolet?style=for-the-badge&logo=github)](https://education.github.com/pack)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Maintainer](https://img.shields.io/badge/Maintainer-Felipe%20Genovese-blue?style=for-the-badge)](https://github.com/Genovese-Felipe)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 
 [🇺🇸 English](#english) | [🇧🇷 Português](#português)
